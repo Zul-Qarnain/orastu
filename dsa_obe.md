@@ -22,7 +22,7 @@ Student students[40]; // An array to hold 40 student records
 
 **i) Difference between Highest and Lowest BestQ Marks:**
 
-```
+```cpp
 function findBestQDifference(students):
   if students is empty:
     return "Error: No students in the list"
@@ -43,7 +43,7 @@ function findBestQDifference(students):
 
 **ii) Students with BestQ Mark Higher than 20:**
 
-```
+```cpp
 function findStudentsWithHighBestQ(students):
   highBestQStudents = [] // Initialize an empty list
 
@@ -56,7 +56,7 @@ function findStudentsWithHighBestQ(students):
 
 **iii) Calculate BestQ and Total:**
 
-```
+```cpp
 function calculateBestQandTotal(ID, Quiz1, Quiz2, Term):
   BestQ = max(Quiz1, Quiz2)
   Total = BestQ + Term
