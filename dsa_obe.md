@@ -90,3 +90,56 @@ This provides a complete solution with a suitable data structure and efficient p
 
 
 If you were updating the student records, you would add logic to find the student in the array using their ID and then update their `BestQ` and `Total` fields with the calculated values.
+
+
+**insertaion of element: **
+
+
+```cpp
+
+function insertStudent(students, size, maxSize, index, newStudent):
+  if size >= maxSize:
+    print "Error: Cannot insert, array is full."
+    return
+
+  if index < 0 or index > size:
+    print "Error: Index out of bounds."
+    return
+
+  // Shift elements to the right from the end to the target index
+  for i = size - 1 down to index:
+    students[i + 1] = students[i]
+
+  // Insert the new student record at the target index
+  students[index] = newStudent
+
+  // Increment the size
+  size = size + 1
+
+  print "Student inserted successfully."
+
+```
+
+**Deletation of element:**
+
+```cpp
+
+function deleteStudent(students, size, index):
+  if size == 0:
+    print "Error: Cannot delete, array is empty."
+    return
+
+  if index < 0 or index >= size:
+    print "Error: Index out of bounds."
+    return
+
+  // Shift elements to the left from the target index to the end
+  for i = index to size - 2:
+    students[i] = students[i + 1]
+
+  // Decrement the size
+  size = size - 1
+
+  print "Student deleted successfully."
+
+```
